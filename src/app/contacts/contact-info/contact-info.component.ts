@@ -9,6 +9,7 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 })
 export class ContactInfoComponent implements OnInit {
   serverForm: FormGroup;
+  send = false;
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
@@ -29,7 +30,10 @@ export class ContactInfoComponent implements OnInit {
     this.router.navigate(['../'], {relativeTo: this.route});
   }
   onCancel() {
-    this.router.navigate(['../'], {relativeTo: this.route});
+    this.router.navigate(['home']);
+  }
+  sendEmail(){
+    this.send = true;
   }
   private initForm() {
     let firstname = '';

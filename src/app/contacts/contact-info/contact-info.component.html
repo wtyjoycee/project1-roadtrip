@@ -53,8 +53,8 @@
               <option value="female">FEMALE</option>
               <option value="male">MALE</option>
             </select>  -->
-            <input type="radio" id = "male" name="gender" value="male" checked="checked"> MALE 
-            <input type="radio" id = "female" name="gender" value="female"> FEMALE
+            <input type="radio" id = "male" name="gender" value="male" checked="checked"> MALE <p></p>
+            <input type="radio" id = "female" name="gender" value="female"> FEMALE <p></p>
             <input type="radio" id = "other" name="gender" value="other"> OTHER
         </div>
         
@@ -63,6 +63,9 @@
             <div class="form-group">
               <label for="description">Why you want to connect us?</label>
               <textarea
+              matInput cdkTextareaAutosize
+            cdkAutosizeMinRows="2"
+            cdkAutosizeMaxRows="5"
                 type="text"
                 id="description"
                 class="form-control"
@@ -76,11 +79,19 @@
               <button
                 type="submit"
                 class="btn btn-success"
-                [disabled]="!serverForm.valid">Save</button>
+                [disabled]="!serverForm.valid" (click) = sendEmail()>Submit</button>
               <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
             </div>
           </div>
       </form>
+      
+      <!-- <div *ngIf="send"
+      class="alert alert-danger">
+      <div>
+        message is required.
+      </div>
+    </div> -->
+
     </div>
   </div>
 </div>

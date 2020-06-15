@@ -11,6 +11,7 @@ import { TeamInfoComponent } from './contacts/team-info/team-info.component';
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'contacts',   redirectTo: '/contacts/contact-info', pathMatch: 'full' },
   { path: 'contacts', component: ContactsComponent, children: [
     { path: 'contact-us', component: ContactUSComponent },
     { path: 'contact-info', component: ContactInfoComponent },
