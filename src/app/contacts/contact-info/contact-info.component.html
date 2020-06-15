@@ -1,0 +1,99 @@
+
+<div class="container" >
+    <div class="row" style="white-space:pre">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <h2>Your contact information</h2>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-3 col-md-offset-4">
+      <form [formGroup]="serverForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="firstname">First Name</label>
+              <input
+                type="text"
+                id="firstname"
+                formControlName="firstname"
+                class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  formControlName="lastname"
+                  class="form-control">
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  formControlName="email"
+                  class="form-control">
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender: </label> <br>
+            <!-- <select
+              id="gender"
+              class="form-control"
+            >
+              <option value="female">FEMALE</option>
+              <option value="male">MALE</option>
+            </select>  -->
+            <input type="radio" id = "male" name="gender" value="male" checked="checked"> MALE 
+            <input type="radio" id = "female" name="gender" value="female"> FEMALE
+            <input type="radio" id = "other" name="gender" value="other"> OTHER
+        </div>
+        
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea
+                type="text"
+                id="description"
+                class="form-control"
+                formControlName="description"
+                rows="6"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+              <button
+                type="submit"
+                class="btn btn-success"
+                [disabled]="!serverForm.valid">Save</button>
+              <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <!-- <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="imagePath">Image URL</label>
+        <input
+          type="text"
+          id="imagePath"
+          formControlName="imagePath"
+          class="form-control"
+          #imagePath>
+      </div>
+    </div>
+  </div> -->
