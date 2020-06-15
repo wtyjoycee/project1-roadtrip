@@ -1,4 +1,20 @@
 <app-contact-us></app-contact-us>
-<app-contact-info></app-contact-info>
+<!-- <app-contact-info></app-contact-info>
 <hr>
-<app-team-info></app-team-info>
+<app-team-info></app-team-info> -->
+
+
+  
+  
+  <ul>
+    <li> <a [routerLink] = "['contact-info']"  fragment="contact"> <h3>Level your information </h3></a></li>
+  <li> <a [routerLink] = "['team-info']"  fragment="team"> <h3>Directly Contact Us </h3></a></li>
+</ul>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
