@@ -10,6 +10,7 @@ import { routing } from './routing';
 import { ContactUSComponent } from './contacts/contact-us/contact-us.component';
 import { ContactInfoComponent } from './contacts/contact-info/contact-info.component';
 import { TeamInfoComponent } from './contacts/team-info/team-info.component';
+import { BackgroundComponent } from './background/background.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TeamInfoComponent } from './contacts/team-info/team-info.component';
     AboutComponent,
     ContactUSComponent,
     ContactInfoComponent,
-    TeamInfoComponent
+    TeamInfoComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

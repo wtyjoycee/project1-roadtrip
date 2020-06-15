@@ -1,7 +1,38 @@
-body {
-    background-color:lightblue;
+@keyframes bgcolor {
+  0% {
+      background-color: #1723c7
   }
 
+  30% {
+      background-color:  #1786d4
+  }
+
+  60% {
+      background-color: #55a7e2
+  }
+
+  90% {
+      background-color:  #9dc4e0
+  }
+
+  100% {
+      background-color:  lightblue
+  }
+}
+
+body {
+  -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 10s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+body {
+    background-color:lightblue;
+    
+  }
+
+  
   /* ============================================================================================== 
 SED Innovations
 https://sed.am
